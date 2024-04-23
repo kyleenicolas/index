@@ -3,40 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greet User Form</title>
+    <title>My Weekend Routine</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome!</h1>
-    <p>Please enter your name below:</p>
-    
-    <!-- Form starts here -->
-    <form id="greetForm">
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" name="name" required>
-        <button type="submit">Submit</button>
-    </form>
-    <!-- Form ends here -->
+    <h1>My Weekend Routine</h1>
 
-    <!-- Thank you message will appear here -->
-    <div id="thankYouMessage" style="display: none;">
-        <p>Thank you, <span id="userName"></span>!</p>
-    </div>
-
-    <script>
-        // JavaScript to handle form submission
-        document.getElementById('greetForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Get the value of the input field
-            var userName = document.getElementById('nameInput').value;
-
-            // Display the thank you message with the user's name
-            document.getElementById('userName').textContent = userName;
-            document.getElementById('thankYouMessage').style.display = 'block';
-
-            // Clear the input field
-            document.getElementById('nameInput').value = '';
-        });
-    </script>
+    <!-- Table starts here -->
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th> <!-- Column 1 -->
+                <th>Saturday</th> <!-- Column 2 -->
+                <th>Sunday</th> <!-- Column 3 -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Morning</td> <!-- Row 1 -->
+                <td>Wake up late</td> <!-- Row 1, Column 2 -->
+                <td>Wake up early</td> <!-- Row 1, Column 3 -->
+            </tr>
+            <tr>
+                <td>Noon</td> <!-- Row 2 -->
+                <td>Brunch with friends</td> <!-- Row 2, Column 2 -->
+                <td>Relax at home</td> <!-- Row 2, Column 3 -->
+            </tr>
+            <tr>
+                <td>Afternoon</td> <!-- Row 3 -->
+                <td>Watch a movie</td> <!-- Row 3, Column 2 -->
+                <td>Family time</td> <!-- Row 3, Column 3 -->
+            </tr>
+            <tr>
+                <td>Evening</td> <!-- Row 4 -->
+                <td>Go for a hike</td> <!-- Row 4, Column 2 -->
+                <td>Dinner with family</td> <!-- Row 4, Column 3 -->
+            </tr>
+            <tr>
+                <td>Night</td> <!-- Row 5 -->
+                <td>Read a book</td> <!-- Row 5, Column 2 -->
+                <td>Prepare for the week</td> <!-- Row 5, Column 3 -->
+            </tr>
+        </tbody>
+    </table>
+    <!-- Table ends here -->
 </body>
 </html>
